@@ -1,5 +1,3 @@
-import sys
-
 import requests
 from telegram import Bot
 import asyncio
