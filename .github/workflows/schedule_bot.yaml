@@ -2,7 +2,7 @@ name: Run Python Telegram Bot
 
 on:
   schedule:
-    - cron: '0 14 * * *'  # runs every day at 11:00 AM
+    - cron: '0 15 * * *'  # runs every day at 11:00 AM
   workflow_dispatch:
 
 jobs:
@@ -17,10 +17,11 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.11'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install python-telegram-bot
         pip install -r requirements.txt
     - name: Execute Python script
       run: python main.py
