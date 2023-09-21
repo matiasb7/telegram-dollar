@@ -12,7 +12,7 @@ chat_ids = os.environ.get('CHAT_ID').split(',')
 
 
 def get_coins():
-    response = requests.get(COINS_API)
+    response = requests.get(COINS_API, allow_redirects=False)
     dollar_blue = ''
     euro_blue = ''
     if response.status_code == 200:
