@@ -1,6 +1,6 @@
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, filters
-from currencies import CurrencyModel
-from constants import DOLLAR_LABEL, EURO_LABEL, PESOS_LABEL, MESSAGES
+from models.currency import CurrencyModel
+from config.constants import DOLLAR_LABEL, EURO_LABEL, PESOS_LABEL, MESSAGES
 
 
 class Bot:
